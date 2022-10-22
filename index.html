@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+        }
+        #search_results{
+            width:90%;
+            margin:50px auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(auto,200px);
+            gap:20px;
+        }
+        #search_results>div{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            
+        }
+        #search_results>div>img{
+            text-align: center;
+            width:275px;
+            height:170px;
+            
+        }
+        #search_results>div>p{
+            margin: 10px auto;
+            padding: 0 10px;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navbar{
+            height: 60px;
+            display: flex;
+            align-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #navbar>img{
+            width:3%;
+            background:none;
+            height: 60%;
+            margin-top: 4px;
+            margin-left: 2%;
+        }
+        #navbar>h1{
+            font-weight: 600;
+            letter-spacing: -3px;
+            font-size: 25px;
+        }
+        h1>sup{
+            color:grey;
+
+        }
+        #navbar>input{
+            margin-left:12%;
+            height:35px;
+            width:500px;
+            border:1px solid grey;
+            padding-left:7px;
+            font-size: 17px;
+        }
+        #navbar>div>#search{
+            width:30%;
+            height: auto;
+            margin: left 0px;
+        }
+        #navbar>div{
+            width:65px;
+            height:37px;
+            border:1px solid grey;
+            border-left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!--Our navbar -->
+    <div id="navbar">
+
+        <img src="https://icons.iconarchive.com/icons/dtafalonso/android-l/512/Youtube-icon.png" alt="">
+
+        <h1>YouTube <sup>IN</sup></h1>
+
+        <input type="text" id="query" placeholder="Search">
+
+        <div onclick="getdata()">
+
+            <img  src="https://img.favpng.com/1/16/17/computer-icons-symbol-png-favpng-jdAw0710JVA2gLweyB0pXbGVt.jpg" alt="" id="search" >
+
+        </div>
+
+    </div>
+    
+    
+    <!-- we append our div data here in search_results -->
+    <div id="search_results"></div>
+
+
+</body>
+</html>
+<script  src="index.js"></script>
